@@ -1,127 +1,169 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cidadania Digital e IA</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidadania Digital e IA</title>
 
-<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
-    <h1>Cidadania Digital e Inteligência Artificial</h1>
-    <p>Deepfakes, Fake News e Segurança Online</p>
+    <div class="container">
+        <h1>Cidadania Digital e Inteligência Artificial</h1>
+        <p>Deepfakes, Fake News e Segurança na Internet</p>
 
-    <button id="darkModeBtn">
-        🌙 Modo Escuro
-    </button>
+        <button id="darkModeBtn">
+            🌙 Alternar Tema
+        </button>
+    </div>
 </header>
 
 <nav>
-    <a href="#deepfake">Deepfakes</a>
-    <a href="#fakeNews">Fake News</a>
-    <a href="#dicas">Dicas</a>
+    <a href="#deepfakes">Deepfakes</a>
+    <a href="#desinformacao">Desinformação</a>
+    <a href="#dicas">Proteção</a>
     <a href="#quiz">Quiz</a>
 </nav>
 
 <main>
 
 <section class="hero">
-    <h2>Você consegue identificar uma notícia falsa?</h2>
+    <h2>O futuro digital depende de usuários conscientes</h2>
+
     <p>
-        A Inteligência Artificial trouxe avanços incríveis,
-        mas também aumentou os riscos de manipulação digital.
+        Aprenda como identificar conteúdos manipulados por Inteligência Artificial
+        e proteger-se da desinformação.
     </p>
 </section>
 
-<section id="deepfake" class="card">
+<section id="deepfakes" class="card">
     <h2>🎭 O que são Deepfakes?</h2>
 
     <p>
-        Deepfakes são vídeos, imagens ou áudios criados por IA
-        para imitar pessoas reais de forma extremamente convincente.
+        Deepfakes são vídeos, imagens ou áudios criados por inteligência artificial
+        capazes de imitar pessoas reais com alto grau de realismo.
     </p>
 
-    <button onclick="mostrarAlerta()">
-        Ver Exemplo de Risco
+    <button onclick="mostrarRisco()">
+        Ver Possível Risco
     </button>
 </section>
 
-<section id="fakeNews" class="card">
-    <h2>📰 Fake News Automatizadas</h2>
+<section id="desinformacao" class="card">
+    <h2>📰 Desinformação e Fake News</h2>
 
     <p>
-        Sistemas de IA podem criar notícias falsas rapidamente,
-        espalhando desinformação em redes sociais.
+        A IA pode ser usada para criar notícias falsas, perfis automatizados e
+        conteúdos enganosos que influenciam opiniões e decisões.
     </p>
 
-    <div class="stats">
-        <div>
+    <div class="estatisticas">
+
+        <div class="numero">
             <h3 id="contador1">0</h3>
-            <p>Usuários impactados</p>
+            <p>Conteúdos analisados</p>
         </div>
 
-        <div>
+        <div class="numero">
             <h3 id="contador2">0</h3>
-            <p>Notícias falsas compartilhadas</p>
+            <p>Casos de desinformação</p>
         </div>
+
+        <div class="numero">
+            <h3 id="contador3">0</h3>
+            <p>Usuários conscientes</p>
+        </div>
+
     </div>
 </section>
 
 <section id="dicas" class="card">
+
     <h2>🛡️ Como se proteger?</h2>
 
-    <ul>
-        <li>Verifique a fonte da informação.</li>
-        <li>Pesquise em sites confiáveis.</li>
-        <li>Desconfie de conteúdos emocionais.</li>
-        <li>Observe erros visuais em vídeos.</li>
-        <li>Nunca compartilhe sem confirmar.</li>
-    </ul>
+    <div class="grid">
+
+        <div class="dica">
+            ✔ Verifique a fonte da informação.
+        </div>
+
+        <div class="dica">
+            ✔ Pesquise em mais de um site.
+        </div>
+
+        <div class="dica">
+            ✔ Não compartilhe imediatamente.
+        </div>
+
+        <div class="dica">
+            ✔ Observe detalhes estranhos em vídeos.
+        </div>
+
+        <div class="dica">
+            ✔ Desconfie de mensagens alarmistas.
+        </div>
+
+        <div class="dica">
+            ✔ Use fontes confiáveis.
+        </div>
+
+    </div>
+
 </section>
 
 <section id="quiz" class="card">
-    <h2>🎯 Quiz de Cidadania Digital</h2>
+
+    <h2>🎯 Quiz Interativo</h2>
 
     <p>
-        Uma notícia recebida por WhatsApp sem fonte confiável deve:
+        Uma notícia sem fonte confiável recebida em um grupo deve:
     </p>
 
-    <button onclick="respostaErrada()">
-        Compartilhar imediatamente
-    </button>
+    <div class="quiz-botoes">
+        <button onclick="errado()">
+            Compartilhar imediatamente
+        </button>
 
-    <button onclick="respostaCorreta()">
-        Ser verificada antes
-    </button>
+        <button onclick="correto()">
+            Verificar antes de compartilhar
+        </button>
+    </div>
 
-    <div id="resultadoQuiz"></div>
+    <h3 id="resultado"></h3>
+
 </section>
 
 <section class="card">
+
     <h2>📩 Compromisso Digital</h2>
 
     <form id="formulario">
+
         <input
-            type="text"
-            id="nome"
-            placeholder="Digite seu nome">
+        type="text"
+        id="nome"
+        placeholder="Digite seu nome">
 
         <button type="submit">
-            Assinar compromisso
+            Assinar Compromisso
         </button>
+
     </form>
 
     <p id="mensagem"></p>
+
 </section>
 
 </main>
 
 <footer>
+
     <p>
-        Projeto Educacional - Educação Digital e IA 2026
+        Projeto de Educação Digital e IA - 2026
     </p>
+
 </footer>
 
 <script src="js/script.js"></script>
